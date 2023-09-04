@@ -1,0 +1,25 @@
+# Ignore .idea directory
+.idea/
+
+# Ignore node_modules directory
+node_modules/
+
+# Ignore package-lock.json file
+package-lock.json
+
+# Ignore any files ending with .ipynb_checkpoints/
+*.ipynb_checkpoints/
+
+# Ignore .editorconfig file
+.editorconfig
+
+# Ignore .prettierrc file
+.prettierrc
+
+# Ignore test.json file
+test.json
+
+# Ignore wrangler.toml file
+wrangler.toml
+req.py 
+one.ipynb 
