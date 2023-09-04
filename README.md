@@ -18,4 +18,4 @@
 1. Search file
 2. Admin Authentication
 
-![Image](blob:https://github.com/faac51eb-b52d-45d3-9203-30f22d7e50cd)
+![Image](<https://github.com/mahbubmaruf178/one-index/blob/master/screen/Screenshot%20(3).png?raw=true>)
