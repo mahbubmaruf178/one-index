@@ -2,10 +2,13 @@
 
 ## Installation
 
-1. Copy all the code from [open in new tab] (https://github.com/mahbubmaruf178/one-index/blob/master/output/worker.js)
+1. Copy all the code from (https://github.com/mahbubmaruf178/one-index/blob/master/output/worker.js)
 2. Go to Cloudflare Workers and create a new worker
 3. Paste the code and save it
 4. Relace the refresh token with your own
+
+How to get refresh token ?
+(https://github.com/mahbubmaruf178/msgraphapi)
 
 ## Feature
 
