@@ -7,7 +7,7 @@ This project allows you to create an index for your OneDrive files using Cloudfl
 1. Copy the code from [this link](https://github.com/mahbubmaruf178/one-index/blob/master/output/worker.js).
 2. Go to Cloudflare Workers and create a new worker.
 3. Paste the copied code into the worker and save it.
-4. Replace the refresh token with your own. You can find instructions on how to obtain a refresh token [here](https://github.com/mahbubmaruf178/msgraphapi).
+4. Replace the refresh token, client id , client secret  with your own. You can find instructions on how to obtain  [here](https://github.com/mahbubmaruf178/msgraphapi).
 
 ## Features
 
