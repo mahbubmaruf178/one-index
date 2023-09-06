@@ -1,6 +1,7 @@
-var client_id = 'dd8b4a2e-5bad-4256-b0f9-c360b51fde67';
-var client_secret = 'iZh8Q~oYe1jKZ~UbIXAUqDTx1tuYzNQBY706Eces';
-var refresh_token = 'Your refresh token here';
+
+const client_id = 'Your Client ID';
+const client_secret = 'Your Client Secret';
+const refresh_token = 'Your Refresh Token';
 
 // src/html.js
 function DriveItemsHtml(json, pathdomain) {
