@@ -1,8 +1,8 @@
-
-const client_id = 'Your Client ID';
-const client_secret = 'Your Client Secret';
+const client_id = '0a2991a3-1674-4334-8561-671cc7349960';
+const client_secret = 'uw67Q~TCMqdJyH35hlcHHclv~mhNOGx.jfPFm';
+const redirect_uri = 'https://alist.nn.ci/tool/onedrive/callback';
 const refresh_token = 'Your Refresh Token';
-
+const token_url = 'https://login.microsoftonline.com/common/oauth2/v2.0/token';
 // src/html.js
 function DriveItemsHtml(json, pathdomain) {
 	var html = Htmlbody(`
@@ -16,14 +16,15 @@ function DriveItemsHtml(json, pathdomain) {
 				const item = json.value[i];
 				generatedHtml += `
                 <div class="drive-item bg-white p-4 rounded-md shadow-md text-blue-400">
-                  <div class="flex items-center mb-2 overflow-hidden">
-    <i class="${item.folder ? 'fas fa-folder text-blue-500' : 'fas fa-file text-gray-500'} text-2xl mr-2"></i>
+              <div class="flex items-center mb-2 overflow-hidden">
+    <i class="${item.folder ? 'fas fa-folder text-blue-500' : 'fas fa-file text-blue-500'} text-2xl mr-2"></i>
     ${
 			item.folder
-				? `<a href="/bypath?id=${item.id}" class="text-lg font-semibold text-blue-500 hover:underline">${item.name}</a>`
-				: `<a href="/download?id=${item.id}" class="text-lg font-semibold text-gray-500 hover:underline">${item.name}</a>`
+				? `<a href="/bypath?id=${item.id}" class="text-lg font-semibold text-blue-500 hover:underline no-wrap" style="white-space: nowrap;">${item.name}</a>`
+				: `<a href="/download?id=${item.id}" class="text-lg font-semibold text-gray-500 hover:underline no-wrap" style="white-space: nowrap;">${item.name}</a>`
 		}
 </div>
+
 
                    <p class="text-gray-600">
     ${
@@ -42,7 +43,7 @@ function DriveItemsHtml(json, pathdomain) {
 <div class="flex flex-row items-center gap-2">
     <a href="/download?id=${item.id}" class="inline-block text-center border rounded-md px-4 py-2 bg-blue-500 text-white hover:bg-blue-600">
         <i class="fas fa-download"></i> Download
-		
+
     </a>
 <a href="intent:${pathdomain}/download/?id=${item.id}#Intent;type=video/mp4;end" class="inline-block text-center border rounded-md px-4 py-2 bg-blue-500 text-white hover:bg-blue-600">
   <i class="fas fa-play-circle"></i> Open
@@ -224,28 +225,17 @@ var src_default = {
 		});
 	},
 };
-async function getAccessToken(request) {
-	var scope = ' User.Read Files.Read.All Files.Read.All User.Read.All User.ReadBasic.All';
-	var url = 'https://login.microsoftonline.com/common/oauth2/v2.0/token';
-	var body =
-		'grant_type=refresh_token&client_id=' +
-		client_id +
-		'&scope=' +
-		scope +
-		'&refresh_token=' +
-		refresh_token +
-		'&client_secret=' +
-		client_secret;
-	var init = {
-		body,
+async function getAccessToken() {
+	const reqdata = await fetch(token_url, {
 		method: 'POST',
+		body: `client_id=${client_id}&scope=offline_access%20Files.ReadWrite.All&refresh_token=${refresh_token}&redirect_uri=${redirect_uri}&grant_type=refresh_token&client_secret=${client_secret}`,
 		headers: {
 			'Content-Type': 'application/x-www-form-urlencoded',
 		},
-	};
-	var response = await fetch(url, init);
-	var json = await response.json();
-	return json.access_token;
+	});
+	const data = await reqdata.json();
+	const accessToken = data.access_token;
+	return accessToken;
 }
 export { src_default as default };
 //# sourceMappingURL=index.js.map
