@@ -2,7 +2,7 @@ import { DriveItemsHtml } from './html.js';
 const client_id = '0a2991a3-1674-4334-8561-671cc7349960';
 const client_secret = 'uw67Q~TCMqdJyH35hlcHHclv~mhNOGx.jfPFm';
 const redirect_uri = 'https://alist.nn.ci/tool/onedrive/callback';
-const refresh_token = 'Tour Refresh Token';
+const refresh_token = ' Your Refresh Token';
 const token_url = 'https://login.microsoftonline.com/common/oauth2/v2.0/token';
 
 export default {
