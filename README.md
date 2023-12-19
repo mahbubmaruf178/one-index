@@ -1,4 +1,4 @@
-# OneDrive Index
+# One Index
 
 This project allows you to create an index for your OneDrive files using Cloudflare Workers. With this index, you can download files using Cloudflare's reverse proxy, open files with an Android app, and enjoy resume download support.
 
