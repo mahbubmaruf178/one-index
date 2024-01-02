@@ -1,0 +1,60 @@
+{
+	"@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users('36306eb9-c59e-4b74-a22a-5e4b77d31407')/drive/root/children",
+	"value": [
+		{
+			"createdDateTime": "2023-08-13T04:26:00Z",
+			"eTag": "\"{AB2345AF-AE53-4993-A817-2D6791E62051},1\"",
+			"id": "0162GLWGFPIUR2WU5OSNE2QFZNM6I6MICR",
+			"lastModifiedDateTime": "2023-08-13T04:26:00Z",
+			"name": "Attachments",
+			"webUrl": "https://5pthwz-my.sharepoint.com/personal/m_5pthwz_onmicrosoft_com/Documents/Attachments",
+			"cTag": "\"c:{AB2345AF-AE53-4993-A817-2D6791E62051},0\"",
+			"size": 0,
+			"createdBy": {
+				"application": { "id": "9e4a5442-a5c9-4f6f-b03f-5b9fcaaf24b1", "displayName": "OfficeServicesManager" },
+				"user": { "email": "m@5pthwz.onmicrosoft.com", "id": "36306eb9-c59e-4b74-a22a-5e4b77d31407", "displayName": "md maruf" }
+			},
+			"lastModifiedBy": {
+				"application": { "id": "9e4a5442-a5c9-4f6f-b03f-5b9fcaaf24b1", "displayName": "OfficeServicesManager" },
+				"user": { "email": "m@5pthwz.onmicrosoft.com", "id": "36306eb9-c59e-4b74-a22a-5e4b77d31407", "displayName": "md maruf" }
+			},
+			"parentReference": {
+				"driveType": "business",
+				"driveId": "b!6thy-P4AaEWcEGNML819KM_HbAXMA95JtvC0Pb7b2DYVlGTsMIbgSKLuDKssU8PM",
+				"id": "0162GLWGF6Y2GOVW7725BZO354PWSELRRZ",
+				"path": "/drive/root:",
+				"siteId": "f872d8ea-00fe-4568-9c10-634c2fcd7d28"
+			},
+			"fileSystemInfo": { "createdDateTime": "2023-08-13T04:26:00Z", "lastModifiedDateTime": "2023-08-13T04:26:00Z" },
+			"folder": { "childCount": 0 },
+			"specialFolder": { "name": "attachments" }
+		},
+		{
+			"createdDateTime": "2023-08-02T04:26:39Z",
+			"eTag": "\"{DDB6A643-B2E0-44DD-8DB5-6A1B2E2A5332},1\"",
+			"id": "0162GLWGCDU23N3YFS3VCI3NLKDMXCUUZS",
+			"lastModifiedDateTime": "2023-08-02T04:26:39Z",
+			"name": "test",
+			"webUrl": "https://5pthwz-my.sharepoint.com/personal/m_5pthwz_onmicrosoft_com/Documents/test",
+			"cTag": "\"c:{DDB6A643-B2E0-44DD-8DB5-6A1B2E2A5332},0\"",
+			"size": 94719204587,
+			"createdBy": {
+				"application": { "id": "b15665d9-eda6-4092-8539-0eec376afd59", "displayName": "rclone" },
+				"user": { "email": "m@5pthwz.onmicrosoft.com", "id": "36306eb9-c59e-4b74-a22a-5e4b77d31407", "displayName": "md maruf" }
+			},
+			"lastModifiedBy": {
+				"application": { "id": "b15665d9-eda6-4092-8539-0eec376afd59", "displayName": "rclone" },
+				"user": { "email": "m@5pthwz.onmicrosoft.com", "id": "36306eb9-c59e-4b74-a22a-5e4b77d31407", "displayName": "md maruf" }
+			},
+			"parentReference": {
+				"driveType": "business",
+				"driveId": "b!6thy-P4AaEWcEGNML819KM_HbAXMA95JtvC0Pb7b2DYVlGTsMIbgSKLuDKssU8PM",
+				"id": "0162GLWGF6Y2GOVW7725BZO354PWSELRRZ",
+				"path": "/drive/root:",
+				"siteId": "f872d8ea-00fe-4568-9c10-634c2fcd7d28"
+			},
+			"fileSystemInfo": { "createdDateTime": "2023-08-02T04:26:39Z", "lastModifiedDateTime": "2023-08-02T04:26:39Z" },
+			"folder": { "childCount": 181 }
+		}
+	]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "one-index",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "pages:dev": "wrangler pages dev --compatibility-date=2023-10-14 -- astro dev",
+    "pages:deploy": "astro build && wrangler pages deploy ./dist"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^7.5.3",
+    "@astrojs/tailwind": "^5.0.2",
+    "astro": "^3.3.0",
+    "tailwindcss": "^3.3.3"
+  },
+  "devDependencies": {
+    "wrangler": "^3.13.1"
+  }
+}
