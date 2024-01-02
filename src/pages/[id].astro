@@ -1,0 +1,57 @@
+---
+const { id } = Astro.params;
+async function getAccessToken() {
+  const client_id = "0a2991a3-1674-4334-8561-671cc7349960";
+  const client_secret = "uw67Q~TCMqdJyH35hlcHHclv~mhNOGx.jfPFm";
+  const redirect_uri = "https://alist.nn.ci/tool/onedrive/callback";
+  const refresh_token =
+    "0.AUoAJGMhXWgu7E-pXfpN7WNVxqORKQp0FjRDhWFnHMc0mWCJAJY.AgABAAEAAAAtyolDObpQQ5VtlI4uGjEPAgDs_wUA9P9VzS9EhPAIzKAhjEyKFBI4kBphjzika4MdyjulwNbZVpwXJJebEMgryu0w1pQEeRrgo7fFlqrp401cUBZ10rSzg4mfKP3F9AtIXS4lFrHh_WZvTFth5Ptxv79Qa5Hhh9cH68i48pl3JXRP9OyYb96r6Jl1zfZgkP8xriAtlU2HyyoMrSeCSwl2LDmL8voPRsIUFbf0dlA4ZrAQ2HgpE9TwwakznKbAZo4CZLYYkFDhjF668aZVm9ntAleiRLk-Y_RdJld_0WnX7SY8EUf3Se0hq4wsktdrsyfwr15wu-yR8VH9JHRtgROBcmSFJjRDmmNYdhasn1r3MRVQaQciVioJXP6JGtYx_rcmd-6gm7rBiSZwbfvYEOSP5rXvacCo9h0Tbnf7ZIW-yPzJnTTaz0gxDpjA-ccsEqU8gisZDl91VaKu-ael-Mxf4_W-MkxeMjrAXFKz61AJgqu_gyxKkW2cLbs0YYgdbwnnaRF9Ka9COQ9oiAVjTMB_zmq6SIDEzHEDT2M4GgFiQpd1Mne8dTiVLFPRN9WuhIO2Fv64sGOsb6u9NjKhUUgoxdqNulotvjzv6TREjFHObdwfKDXgrUk_DzH49H5gA2p7v0S8JaY0c8xLGcsTzw-0NK2s7b-X7VpoSD4KtQErdNG40TFNIvas40294tWuMD-oQH23ZciE-3JUn7oR5nXohITUaOfSBocjSkQ0gFMbQwcZrwL6VOkrIh30LiPZ2NXoahm-TY5sBJmIoq3HhmZr6ImliRmLxOO318mY37v4CJKUByMCSvCu";
+
+  const token_url =
+    "https://login.microsoftonline.com/common/oauth2/v2.0/token";
+  const reqdata = await fetch(token_url, {
+    method: "POST",
+    body: `client_id=${client_id}&scope=offline_access%20Files.ReadWrite.All&refresh_token=${refresh_token}&redirect_uri=${redirect_uri}&grant_type=refresh_token&client_secret=${client_secret}`,
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+  });
+  const data = await reqdata.json();
+  return data.access_token;
+}
+// const url = `https://graph.microsoft.com/v1.0/me/drive/root/children`;
+const url = `https://graph.microsoft.com/v1.0/me/drive/items/${id}/children?$expand=thumbnails`;
+const accesstoken = await getAccessToken();
+const init = {
+  method: "GET",
+  headers: {
+    Authorization: "Bearer " + accesstoken,
+  },
+};
+const response = await fetch(url, init);
+const jdata = await response.json();
+console.log(JSON.stringify(jdata));
+---
+
+<main
+  class="overflow-scroll overflow-x-hidden rounded-md h-screen p-3 grid grid-cols-1 lg:grid-cols-4 gap-2 w-full"
+>
+  {
+    jdata.value.map((item: any) => (
+      <div class=" flex flex-col items-center justify-center bg-white rounded-lg shadow-lg p-1">
+        <img
+          src={item.thumbnails[0]?.large.url}
+          alt={item.name}
+          class="w-full h-full object-cover  blur-3xl"
+        />
+
+        <p class="px-1 max-w-full max-h-52   truncatec  text-center ">
+          {item.name}
+        </p>
+      </div>
+    ))
+  }
+</main>
+<script>
+  // log jdata
+</script>
