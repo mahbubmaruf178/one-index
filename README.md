@@ -24,7 +24,10 @@ We have some exciting features in the pipeline:
 
 ## Screenshots
 
-![Image](<https://github.com/mahbubmaruf178/one-index/blob/master/screen/Screenshot%20(3).png?raw=true>)
+![Image](<https://github.com/mahbubmaruf178/one-index/blob/master/public/list.png?raw=true>)
+
+![Image](<https://github.com/mahbubmaruf178/one-index/blob/master/public/ss1.png?raw=true>)
+![Image](<https://github.com/mahbubmaruf178/one-index/blob/master/public/ss2.png?raw=true>)
 
 ## Contributing
 
