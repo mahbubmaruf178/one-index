@@ -1,0 +1,50 @@
+---
+import {DriveList, GetDriver} from "../../oi-config";
+
+const url = new URLSearchParams(Astro.params.url);
+console.log(Astro.url.searchParams.get('id'))
+import Public from "../../layout/public.astro";
+const { path } = Astro.params;
+const driver = GetDriver(path);
+const id = Astro.url.searchParams.get('id');
+ let  items:DriveList[]
+if (id) {
+    items = await driver.List(id);
+} else {
+    items = await driver.List();
+}
+---
+<Public title="list ">
+<div class="w-full max-w-7xl mx-auto flex flex-col gap-2">
+    {items.map((item:DriveList, index) => (
+            <div
+                    class="flex justify-between p-3 font-semibold bg-white rounded-md shadow-md">
+                <a href={
+                    item.type === 'folder' ? `/drive/${path}?id=${item.id}` : `/api/download?path=${path}&id=${item.id}`
+                } class="flex align-middle items-center  gap-2 truncate">
+                    {item.type === 'folder' ? (
+                            <i class="fa-solid fa-folder text-2xl text-blue-500  "></i>
+                    ) : (
+                            <i class="fas fa-file-alt text-2xl text-blue-500"></i>
+                    )}
+                    <span class="text-gray-400 text-md ">{item.name}</span>
+                </a>
+                <div class="flex flex-row  align-middle items-center  gap-2">
+                    {item.type === 'folder' ?null : (
+                            <div class="flex flex-row items-center gap-2">
+                                <!--href="intent:${pathdomain}/download/?id=${item.id}#Intent;type=video/mp4;end"-->
+                                <a
+                                        href={"intent:" + "/api/download?path=" + path + "&id=" + item.id}
+                                        class="inline-block text-center border rounded-md px-4 py-2 bg-blue-500 text-white hover:bg-blue-600"
+                                >
+                                    <i class="fas fa-play-circle"></i> Open
+                                </a>
+
+                            </div>
+                    )}
+                    <span class="text-gray-700 text-md">{(item.size / 1024 / 1024).toFixed(2)} MB </span>
+                </div>
+            </div>
+    ))}
+</div>
+</Public>

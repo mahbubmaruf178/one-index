@@ -5,7 +5,9 @@ dist/
 
 # dependencies
 node_modules/
-
+one.ipynb
+req.py
+test.json
 
 # logs
 npm-debug.log*
