@@ -3,13 +3,13 @@ export const AllDrivers: DriverConfig[] = [
     path: "onedrivetwo", // should be unique for each driver , space not allowed ,
     type: "onedrive",
     refreshtoken:
-      "M.C106_BAY.-CZgOAqRgWQF0ClGIlGzcJ4SKjRQfUJM3tB0oOOYFrV4Ny7fhMGr1eEvSXX69ioiVnTtqRhs099j8TKyDX5xgGxcnYrrJzZMwrh5V0fvLTJBSPKUwPyee3Quz3asv4U87di!0df5rB0!VvcxuLTTvzvZ43JKJS*1*qjdMd92mqp4dObj0Tx4171ZQHKKWrCmFg!G6YvDFAhIq!VB0SHDiHRax*mqTBZTTNGb!aKVdFLsj4Geppfu758oitaESamOvNfOHMAKv9HCRYUOMvYk63tNUW4cAEc0JroUmI3FMuegJtdJ7Fb0SlGG1GfXI67ySFoBfGjDxdij6Nrv23GTBQ7H3zbbRjRyUfCNN1!ZggnWr4TDPerJWMsdxJ4YtGmX2isW49uYV63tQA!0MbUlsqd8b9YWJMgJ6ax1GhSywD!Q3ZfcL1v0JpzpS1FFmGGiiQprYTPqIsteIf0UT21oWbole3NHDaIT25HXc0C4t6pBY",
+      "YOur refresh token here from https://alist.nn.ci/tool/onedrive/request.html",
   },
   {
     path: "onedriveone", // should be unique for each driver , space not allowed ,
     type: "onedrive",
     refreshtoken:
-        "0.AUoAJGMhXWgu7E-pXfpN7WNVxqORKQp0FjRDhWFnHMc0mWCJAJY.AgABAAEAAAAmoFfGtYxvRrNriQdPKIZ-AgDs_wUA9P-R8QXtGjxcpDuTmNQeS0pou7R20FnzY_-fyFnuTa3KD0jarC1EUt_z6HnDepwrJlh4RA3Z72LZrl14WAjO2pg3bOwXV_30Nuo2jUEkd73ogOhqOj3dYqtNravKr1EC3GqlXvg3jwfT6_cCSDXjxWOAaeZhp_6X4dJVnAjuBdPc2f0tf4KCuA-zW-G4tpJmeJya2Yx98VRqnQfzNfVBazsemDf8U1trqhsMyuWMZTxFXSIMJf5Y7MtecQeNWx0wMXteJTeZxsQSZXTxdgW92ibFSHecrMPahVFXnllmr5hr0DWFB6nRKWy76MXrWoNLfdmgx-LiM7Cz_Rfa5gmN6LR8Pia2A0vW5JW6TDG-WAe1wP0lM-ZrizQuaytBFoxEZiKYHY5yRhzPLbNlSDcOVjzeO8BhJTKi2jtr4SCk4NjPg7D72vJ5pcTmrVG6NKNobyuZb7lkA323irBpgPR6MAGFZD4T4AP3_eG4EvNMI8DsqK1KOaGTLyXDcP95vJxTuLeJTNb8m7ky7yacTbeBmQGc7kCzZJJ4J8y77EX3wWf5xTwJ7IsZcIExa-M8neGM6HcbblUzH6d4Ab8y68DX8wMji7Ue15pmaZeVS0G4nJELmQFt9esb6IOnONEY1AJg8Ftpa0VE_Kb1CbfEMiSX5XqHFO4U-O7Q6U_Qwix9lYqssvXYIoQcXpv6SJq65BlqCp9I3m-WTR6m4EuFTvjgL17xz82VR3PwsWtls-qL17RXY45TuhD7gSr4Ix1FfwRpJ26zI1Em95OMyVtk3B9p8KkW",
+        "YOur refresh token here from https://alist.nn.ci/tool/onedrive/request.html",
   },
   {
     path: "gdrive", // should be unique for each driver
