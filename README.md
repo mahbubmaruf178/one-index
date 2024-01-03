@@ -6,6 +6,8 @@ This project allows you to create an index for your OneDrive,Gdrive,Pcloud.. etc
 1. Fork this repository to your GitHub account.
 2. Edit index.config.ts file. 
 3. Replace the refresh token.You Will get refresh token from [here](https://alist.nn.ci/tool/onedrive/request.html).
+4. Go to [Cloudflare Workers](https://workers.cloudflare.com/) and create a new project.
+5. Now Deploy your project from your GitHub repository.
 
 ## Features
 
