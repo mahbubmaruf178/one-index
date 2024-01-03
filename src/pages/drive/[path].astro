@@ -8,6 +8,7 @@ const { path } = Astro.params;
 const driver = GetDriver(path);
 const id = Astro.url.searchParams.get('id');
  let  items:DriveList[]
+let Origin = Astro.url.origin
 if (id) {
     items = await driver.List(id);
 } else {
@@ -32,9 +33,8 @@ if (id) {
                 <div class="flex flex-row  align-middle items-center  gap-2">
                     {item.type === 'folder' ?null : (
                             <div class="flex flex-row items-center gap-2">
-                                <!--href="intent:${pathdomain}/download/?id=${item.id}#Intent;type=video/mp4;end"-->
                                 <a
-                                        href={"intent:" + "/api/download?path=" + path + "&id=" + item.id}
+                                        href={`intent:"${Origin}+"/api/download?path=` + path + "&id=" + item.id}
                                         class="inline-block text-center border rounded-md px-4 py-2 bg-blue-500 text-white hover:bg-blue-600"
                                 >
                                     <i class="fas fa-play-circle"></i> Open
