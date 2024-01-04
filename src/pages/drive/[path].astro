@@ -13,6 +13,8 @@ if (id) {
     items = await driver.List(id);
 } else {
     items = await driver.List();
+    console.log(items.length);
+    
 }
 ---
 <Public title="list ">
