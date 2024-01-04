@@ -10,13 +10,9 @@ This project allows you to create an index for your OneDrive,Gdrive,Pcloud.. etc
 * Replace the refresh token.You Will get refresh token from [here](https://alist.nn.ci/tool/onedrive/request.html).
 * Set up a new project on Cloudflare Pages.
 * Log in to the Cloudflare dashboard and select your account in Account Home > Pages.
-* 
 * Select Create a new Project and the Connect Git option.
-* 
 * Select the git project you want to deploy and click Begin setup
-* 
 * Use the following build settings:
-* 
 * Framework preset: Astro
 * Build command: npm run build
 * Build output directory: dist
