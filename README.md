@@ -3,17 +3,32 @@
 This project allows you to create an index for your OneDrive,Gdrive,Pcloud.. etc files using Cloudflare Workers. With this index, you can download files using Cloudflare's reverse proxy, open files with an Android app, and enjoy resume download support.
 
 ## Installation
-1. Fork this repository to your GitHub account.
-2. Edit index.config.ts file. 
-3. Replace the refresh token.You Will get refresh token from [here](https://alist.nn.ci/tool/onedrive/request.html).
-4. Go to [Cloudflare Workers](https://workers.cloudflare.com/) and create a new project.
-5. Now Deploy your project from your GitHub repository.
+
+##  How to deploy a site with GitHub 
+* Fork this repository to your GitHub account.
+* Edit index.config.ts file. 
+* Replace the refresh token.You Will get refresh token from [here](https://alist.nn.ci/tool/onedrive/request.html).
+* Set up a new project on Cloudflare Pages.
+* Log in to the Cloudflare dashboard and select your account in Account Home > Pages.
+* 
+* Select Create a new Project and the Connect Git option.
+* 
+* Select the git project you want to deploy and click Begin setup
+* 
+* Use the following build settings:
+* 
+* Framework preset: Astro
+* Build command: npm run build
+* Build output directory: dist
+* Click the Save and Deploy button.
+
 
 ## Features
 
 - Download files with Cloudflare reverse proxy.
 - Open files with an Android app.
 - Resume download supported.
+- multi drive supported.
 
 
 ## Upcoming Features
