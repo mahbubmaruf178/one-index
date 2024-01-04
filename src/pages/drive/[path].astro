@@ -33,8 +33,15 @@ if (id) {
                 <div class="flex flex-row  align-middle items-center  gap-2">
                     {item.type === 'folder' ?null : (
                             <div class="flex flex-row items-center gap-2">
-                                <a
-                                        href={`Potplayer://"${Origin}+"/api/download?path=` + path + "&id=" + item.id}
+                                <a id="intent"
+                                        href={`intent:${Origin}/api/download?path=`+ path + "&id=" + item.id+"#Intent;type=video/mp4;end"}
+                                        class="inline-block text-center border rounded-md px-4 py-2 bg-blue-500 text-white hover:bg-blue-600"
+                                >
+                                    <i class="fas fa-play-circle"></i> Open
+                                </a>
+                            <!--    potpalyer-->
+                                <a id="potplayer"
+                                        href={`Potplayer://${Origin}/api/download?path=`+path+"&id="+item.id}
                                         class="inline-block text-center border rounded-md px-4 py-2 bg-blue-500 text-white hover:bg-blue-600"
                                 >
                                     <i class="fas fa-play-circle"></i> Open
@@ -48,3 +55,18 @@ if (id) {
     ))}
 </div>
 </Public>
+
+<style>
+
+    @media (max-width: 640px) {
+
+        #potplayer{
+            display: none;
+        }
+    }
+    #intent {
+        display: none;
+    }
+
+</style>
+

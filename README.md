@@ -22,7 +22,7 @@ This project allows you to create an index for your OneDrive,Gdrive,Pcloud.. etc
 ## Features
 
 - Download files with Cloudflare reverse proxy.
-- Open files with an Android app.
+- Open files with Android app and in windows PotPlayer.(for video files)
 - Resume download supported.
 - multi drive supported.
 
