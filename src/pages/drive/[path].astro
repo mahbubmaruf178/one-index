@@ -16,7 +16,7 @@ if (id) {
 }
 ---
 <Public title="list ">
-<div class="w-full max-w-7xl mx-auto flex flex-col gap-2">
+<div class="w-full max-w-7xl mx-auto flex flex-col gap-2  p-4 ">
     {items.map((item:DriveList, index) => (
             <div
                     class="flex justify-between p-3 font-semibold bg-white rounded-md shadow-md">
@@ -33,16 +33,16 @@ if (id) {
                 <div class="flex flex-row  align-middle items-center  gap-2">
                     {item.type === 'folder' ?null : (
                             <div class="flex flex-row items-center gap-2">
-                                <a id="intent"
+                                <a
                                         href={`intent:${Origin}/api/download?path=`+ path + "&id=" + item.id+"#Intent;type=video/mp4;end"}
-                                        class="inline-block text-center border rounded-md px-4 py-2 bg-blue-500 text-white hover:bg-blue-600"
+                                        class="inline-block text-center border rounded-md px-4 py-2 bg-blue-500 text-white hover:bg-blue-600 intent "
                                 >
                                     <i class="fas fa-play-circle"></i> Open
                                 </a>
                             <!--    potpalyer-->
-                                <a id="potplayer"
+                                <a
                                         href={`Potplayer://${Origin}/api/download?path=`+path+"&id="+item.id}
-                                        class="inline-block text-center border rounded-md px-4 py-2 bg-blue-500 text-white hover:bg-blue-600"
+                                        class="inline-block text-center border rounded-md px-4 py-2 bg-blue-500 text-white hover:bg-blue-600 potplayer "
                                 >
                                     <i class="fas fa-play-circle"></i> Open
                                 </a>
@@ -57,15 +57,16 @@ if (id) {
 </Public>
 
 <style>
+ @media (min-width: 640px) {
+     .intent {
+         display: none;
+     }
 
+ }
     @media (max-width: 640px) {
-
-        #potplayer{
+        .potplayer {
             display: none;
         }
-    }
-    #intent {
-        display: none;
     }
 
 </style>
