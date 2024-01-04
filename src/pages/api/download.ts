@@ -4,5 +4,5 @@ export async function GET({ request}) {
     const id = url.searchParams.get('id')
    const path =  url.searchParams.get('path')
     const driver =  GetDriver(path)
-    return  driver.GetFile(id)
+    return  driver.GetFile(id,request)
 }
