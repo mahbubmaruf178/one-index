@@ -1,22 +1,22 @@
-// export const AllDrivers: DriverConfig[] = [
-//   {
-//     path: "onedrivetwo", // should be unique for each driver , space not allowed ,
-//     type: "onedrive",
-//     refreshtoken:
-//       "YOur refresh token here from https://alist.nn.ci/tool/onedrive/request.html",
-//   },
-//   {
-//     path: "onedriveone", // should be unique for each driver , space not allowed ,
-//     type: "onedrive",
-//     refreshtoken:
-//         "YOur refresh token here from https://alist.nn.ci/tool/onedrive/request.html",
-//   },
-//   {
-//     path: "gdrive", // should be unique for each driver
-//     type: "googledrive",
-//     refreshtoken: "your_google_drive_refresh_token_here",
-//   },
-// ];
+export const AllDrivers: DriverConfig[] = [
+  {
+    path: "onedrivetwo", // should be unique for each driver , space not allowed ,
+    type: "onedrive",
+    refreshtoken:
+      "YOur refresh token here from https://alist.nn.ci/tool/onedrive/request.html",
+  },
+  {
+    path: "onedriveone", // should be unique for each driver , space not allowed ,
+    type: "onedrive",
+    refreshtoken:
+      "YOur refresh token here from https://alist.nn.ci/tool/onedrive/request.html",
+  },
+  {
+    path: "gdrive", // should be unique for each driver
+    type: "googledrive",
+    refreshtoken: "your_google_drive_refresh_token_here",
+  },
+];
 
 // __ Dot Touch __ if you don't know what you are doing below
 interface DriverIF {
