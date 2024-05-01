@@ -1,18 +1,22 @@
 ---
-import { AllDrivers } from "../../index.config";
+import { AllDrivers } from "../../oneindexconf";
 import Public from "../layout/public.astro";
 ---
 
 <Public title="Home">
   <div class="w-full max-w-7xl mx-auto flex flex-col gap-2">
-    {AllDrivers.map((driver, index) => (
-        <a href={"/drive/" + driver.path}
-            class="flex justify-between p-3 font-semibold bg-white rounded-md shadow-md">
+    {
+      AllDrivers.map((driver, index) => (
+        <a
+          href={"/drive/" + driver.path}
+          class="flex justify-between p-3 font-semibold bg-white rounded-md shadow-md"
+        >
           <div class="flex align-middle items-center  gap-2">
-                <i class="fa-solid fa-folder text-2xl text-blue-500 "></i>
+            <i class="fa-solid fa-folder text-2xl text-blue-500 " />
             <span class="text-gray-400 text-md">{driver.path}</span>
           </div>
         </a>
-    ))}
+      ))
+    }
   </div>
 </Public>
